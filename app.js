@@ -35,7 +35,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 // =================================================
 
 app.get('/', (req, res) => {
-    res.render('user/register');
+    res.render('index');
 });
 
 // =================================================
