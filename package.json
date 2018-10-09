@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hasnain575168/PostJot#readme",
   "dependencies": {
     "express": "^4.16.3",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.3.2"
   }
 }
