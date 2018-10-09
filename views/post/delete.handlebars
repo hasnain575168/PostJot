@@ -1,0 +1,7 @@
+<h3 class="p-3 mb-5 border-bottom">Delete Post</h3>
+
+<form action="/posts/{{post._id}}?_method=DELTE" method="POST" class="text-center">
+    <p>Are you sure you want to delete?</p>
+    <input type="submit" class="btn btn-danger" value="Yes">
+    <a href="/posts/{{post._id}}" class="btn btn-secondary">No</a>
+</form>

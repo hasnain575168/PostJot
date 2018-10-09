@@ -1,0 +1,17 @@
+<h3 class="p-3 mb-5 border-bottom">View All Posts</h3>
+
+{{#if posts}}
+    {{#each posts}}
+    <div class="card mb-4">
+        <div class="card-header">{{this.title}}</div>
+        <div class="card-body">
+            <p>{{this.short_content}}</p>
+            <div>
+                <a href="/posts/{{this._id}}" class="btn btn-info">Read More</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+{{else}}
+<h4>No posts to show!</h4>
+{{/if}}

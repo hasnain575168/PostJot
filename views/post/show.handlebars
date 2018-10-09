@@ -1,0 +1,13 @@
+<h3 class="p-3 mb-5 border-bottom">View Post</h3>
+
+<div class="card">
+    <div class="card-header">{{post.title}}</div>
+    <div class="card-body">
+        <p class="text-muted"><small>Posted by: {{post.author}}, {{post.time}}</small></p>
+        <p>{{post.content}}</p>
+    </div>
+    <div class="card-footer text-right">
+        <a href="/posts/{{post._id}}/edit" class="btn btn-danger">Delete</a>
+        <a href="/posts/{{post._id}}/delete" class="btn btn-warning text-white">Edit</a>
+    </div>
+</div>
