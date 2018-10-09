@@ -9,6 +9,13 @@ const express           = require('express'),
       bodyParser        = require('body-parser');
 
 // =================================================
+//  IMPORTING ROUTES
+// =================================================
+const userRoutes    = require('./routes/user'),
+      postRoutes    = require('./routes/post'),
+      indexRoutes   = require('./routes/index');
+
+// =================================================
 //  DATABASE CONNECTION
 // =================================================
 const dburl = (process.env.DATABASEURL || 'mongodb://localhost/postjot');
@@ -33,10 +40,9 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 // =================================================
 //  ROUTES
 // =================================================
-
-app.get('/', (req, res) => {
-    res.render('index');
-});
+app.use('/', indexRoutes);
+app.use('/posts', postRoutes);
+app.use('/users', userRoutes);
 
 // =================================================
 //  SERVER SETUP
