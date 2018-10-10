@@ -11,13 +11,9 @@ const postSchema = new mongoose.Schema({
     author: String
 });
 
-postSchema.post('validate', (err, doc) => {
-    if(err) {
-        throw err;
-    }
-
-    doc.short_content = content.substr(0, 128) + ' ...';
-    doc.save();
+postSchema.post('validate', (doc, next) => {
+    doc.short_content = doc.content.substr(0, 64) + '...';
+    next();
 });
 
 module.exports = mongoose.model('Post', postSchema);
