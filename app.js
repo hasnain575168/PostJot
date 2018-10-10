@@ -30,10 +30,10 @@ const dburl = (process.env.DATABASEURL || 'mongodb://localhost/postjot');
 mongoose.connect(dburl)
 .then(db => {
     const info = db.connection;
-    console.log(`CONNECTED TO DB mongodb://${info.host}/${info.name}`);
+    console.log(`CONNECTED TO DB | mongodb://${info.host}/${info.name}`);
 })
 .catch(err => {
-    console.log('Error while connecting to database!');
+    console.log('DATABASE CONNECTION FAILURE!');
     throw err;
 });
 
