@@ -6,5 +6,5 @@ A small blog app that uses ES6, RESTful API, easy authentication system using pa
 <div class="highlight highlight-source-shell">
 <pre>$ npm install</pre>
 </div>
-<p>This will automatically download are the required modules.
-Start up your MongoDB server and run the app and you are good to go!</p>
+<p>This will automatically download all the required modules.
+Start up your MongoDB server and run the app.js file and you are good to go!</p>
